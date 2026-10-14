@@ -1,0 +1,1808 @@
+
+/* ==========================================
+   EGG PALACE GHANA
+   COMPLETE PROFESSIONAL STYLESHEET
+========================================== */
+
+/* BRAND COLORS */
+
+:root {
+    --green: #006837;
+    --dark-green: #004629;
+    --gold: #e4ad23;
+    --cream: #faf8f0;
+    --white: #ffffff;
+    --text: #26372c;
+    --muted: #58675d;
+    --border: #e8e3d6;
+    --shadow: 0 6px 22px rgba(0, 40, 18, 0.055);
+}
+
+
+/* ==========================================
+   GLOBAL DESIGN
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+    overflow-wrap: break-word;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -80px;
+    left: 10px;
+    z-index: 200;
+    padding: 12px;
+    background: white;
+    color: var(--dark-green);
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+/* ==========================================
+   WEBSITE HEADER
+========================================== */
+
+.site-header {
+    background: linear-gradient(
+        120deg,
+        var(--dark-green),
+        var(--green)
+    );
+
+    border-bottom: 4px solid var(--gold);
+    padding: 16px 25px;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-logo {
+    width: 95px;
+    height: 75px;
+    object-fit: contain;
+    padding: 4px;
+    background: white;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.brand h1 {
+    color: var(--gold);
+    font-size: 27px;
+    letter-spacing: 0.7px;
+    line-height: 1.25;
+}
+
+.brand p {
+    color: white;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* ==========================================
+   DESKTOP NAVIGATION
+========================================== */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px;
+    padding: 11px 13px;
+
+    background: var(--dark-green);
+    border-bottom: 3px solid var(--gold);
+}
+
+.navbar a {
+    padding: 9px 10px;
+    color: white;
+    font-size: 12.5px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+    background: var(--gold);
+    color: var(--dark-green);
+}
+
+
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
+
+.mobile-menu {
+    display: none;
+    background: var(--dark-green);
+    border-bottom: 3px solid var(--gold);
+}
+
+.mobile-menu summary {
+    cursor: pointer;
+    text-align: center;
+    padding: 14px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    list-style: none;
+}
+
+.mobile-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.mobile-menu summary::marker {
+    content: "";
+}
+
+.mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 18px 12px;
+}
+
+.mobile-menu nav a {
+    padding: 11px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid #ffffff25;
+    font-weight: bold;
+}
+
+.mobile-menu nav a:hover {
+    color: var(--gold);
+}
+
+
+/* ==========================================
+   MAIN WEBSITE LAYOUT
+========================================== */
+
+main {
+    width: min(1100px, 94%);
+    margin: 30px auto;
+}
+
+section {
+    scroll-margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.content-section {
+    background: white;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.content-section h2 {
+    color: var(--dark-green);
+    font-size: 28px;
+    margin: 6px 0 12px;
+    line-height: 1.3;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #946b04;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 7px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   BUTTON DESIGNS
+========================================== */
+
+.primary-btn,
+.secondary-btn,
+.product-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 20px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.primary-btn,
+.product-btn {
+    background: var(--gold);
+    color: var(--dark-green);
+}
+
+.primary-btn:hover,
+.product-btn:hover {
+    background: #f3c34c;
+}
+
+.secondary-btn {
+    border: 2px solid var(--gold);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: var(--gold);
+    color: var(--dark-green);
+}
+
+
+/* ==========================================
+   HOMEPAGE HERO
+========================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    align-items: center;
+    gap: 28px;
+
+    background: linear-gradient(
+        115deg,
+        var(--dark-green),
+        var(--green)
+    );
+
+    color: white;
+    padding: 50px 40px;
+    border: 2px solid var(--gold);
+    border-radius: 15px;
+}
+
+.hero-content,
+.hero-photo {
+    min-width: 0;
+}
+
+.hero-label {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+}
+
+.hero h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 570px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-top: 24px;
+}
+
+.hero-photo img {
+    display: block;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+
+/* ==========================================
+   BUSINESS HIGHLIGHTS
+========================================== */
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    margin-bottom: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.highlights div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+}
+
+.highlights div:last-child {
+    border-right: none;
+}
+
+.highlights strong {
+    color: var(--dark-green);
+    font-size: 27px;
+    line-height: 1;
+}
+
+.highlights span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   FRESH EGGS
+========================================== */
+
+.catalogue-card {
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+.product-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.egg-photo {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.product-heading h3 {
+    color: var(--dark-green);
+    font-size: 22px;
+}
+
+.product-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+
+/* EGG PRICE TABLE */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.price-table th {
+    background: var(--dark-green);
+    color: white;
+    padding: 14px 18px;
+    text-align: left;
+}
+
+.price-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+.price-table th:last-child,
+.price-table td:last-child {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.price-table td:last-child {
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.price-table tbody tr:nth-child(even) {
+    background: var(--cream);
+}
+
+.price-table tbody tr:hover {
+    background: #eef7ee;
+}
+
+.price-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* STOCK STATUS */
+
+.availability {
+    margin: 17px 0 5px;
+    color: var(--dark-green);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.stock-status {
+    display: inline-block;
+    margin: 3px 0 3px 5px;
+    padding: 4px 10px;
+
+    background: #eef5ea;
+    color: #286443;
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+.price-note {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.catalogue-card .product-btn {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   CHICKEN PRODUCT CARDS
+========================================== */
+
+.chicken-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px;
+}
+
+.chicken-card {
+    min-width: 0;
+    padding: 22px;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-align: center;
+}
+
+.chicken-photo {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 11px;
+}
+
+.chicken-card h3 {
+    color: var(--dark-green);
+    font-size: 23px;
+    margin: 17px 0 5px;
+}
+
+.chicken-card > p {
+    color: var(--muted);
+}
+
+.price-display {
+    margin-top: 18px;
+    padding: 16px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    color: var(--dark-green);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.price-display small {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.section-action {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.section-action .price-note {
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   WHY CHOOSE US
+========================================== */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.benefit-card {
+    min-width: 0;
+    padding: 23px 14px;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.benefit-icon {
+    display: grid;
+    place-items: center;
+
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 15px;
+
+    background: #eaf3e8;
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+.benefit-card h3 {
+    color: var(--dark-green);
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   DELIVERY AND FARM PICKUP
+========================================== */
+
+.egg-delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.egg-delivery-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    padding: 24px 18px;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.delivery-icon {
+    display: grid;
+    place-items: center;
+
+    width: 58px;
+    height: 58px;
+    margin-bottom: 14px;
+
+    background: #eaf3e8;
+    border-radius: 50%;
+    font-size: 27px;
+}
+
+.egg-delivery-card h3 {
+    color: var(--dark-green);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.egg-delivery-card > p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.egg-delivery-card .delivery-highlight {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 12px;
+
+    background: #eaf3e8;
+    border-radius: 9px;
+
+    color: var(--dark-green);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.egg-delivery-action {
+    margin-top: 19px;
+    padding: 25px 20px;
+
+    background: #f1f7ee;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.egg-delivery-action h3 {
+    color: var(--dark-green);
+    font-size: 20px;
+}
+
+.egg-delivery-action p {
+    margin: 7px 0 17px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   QUICK WHATSAPP ORDER ENQUIRY
+========================================== */
+
+.order-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.order-form {
+    min-width: 0;
+    padding: 25px;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+.order-form h3 {
+    color: var(--dark-green);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.order-form h3:not(:first-child) {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+
+/* MULTIPLE PRODUCTS */
+
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px auto;
+    gap: 10px;
+    align-items: end;
+
+    padding: 13px;
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.form-field {
+    min-width: 0;
+    margin-bottom: 15px;
+}
+
+.order-item .form-field {
+    margin-bottom: 0;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 6px;
+
+    color: var(--dark-green);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+
+    background: white;
+    border: 1px solid #cdd7cc;
+    border-radius: 7px;
+
+    color: var(--text);
+    font-size: 14px;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+/* REMOVE PRODUCT */
+
+.remove-item-btn {
+    padding: 10px 8px;
+
+    border: 1px solid #cbd6ca;
+    border-radius: 7px;
+
+    background: white;
+    color: #7a3425;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.remove-item-btn:hover {
+    background: #fff0ed;
+}
+
+
+/* ADD PRODUCT */
+
+.add-item-btn {
+    margin-top: 12px;
+    padding: 11px 14px;
+
+    background: white;
+    border: 1px solid var(--green);
+    border-radius: 8px;
+
+    color: var(--dark-green);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.add-item-btn:hover {
+    background: #eaf3e8;
+}
+
+.add-item-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* SELECTED PRODUCTS SUMMARY */
+
+.order-summary {
+    margin-top: 12px;
+    padding: 12px 14px;
+
+    background: #eaf3e8;
+    color: var(--dark-green);
+    border-radius: 8px;
+
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+
+/* FARM PICKUP / DELIVERY / WHATSAPP */
+
+.fulfilment-options {
+    margin: 0 0 17px;
+    padding: 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+.fulfilment-options legend {
+    padding: 0 5px;
+    color: var(--dark-green);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.fulfilment-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin: 5px 17px 5px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.fulfilment-options input {
+    accent-color: var(--green);
+}
+
+
+/* MAIN WHATSAPP BUTTON */
+
+.submit-order-btn {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 16px 20px;
+
+    background: var(--dark-green);
+    color: white;
+    border: 0;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+
+    transition: background 0.2s ease;
+}
+
+.submit-order-btn:hover {
+    background: var(--green);
+}
+
+
+/* BACKUP EMAIL BUTTON */
+
+.email-backup-btn {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px 20px;
+
+    background: white;
+    color: var(--dark-green);
+
+    border: 2px solid var(--dark-green);
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.email-backup-btn:hover {
+    background: #eaf3e8;
+}
+
+
+/* FORM NOTICES */
+
+.form-notice {
+    margin-top: 13px;
+
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.order-status {
+    margin-top: 12px;
+
+    color: var(--dark-green);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.order-status:empty {
+    display: none;
+}
+
+
+/* ==========================================
+   CUSTOMER HELP PANEL
+========================================== */
+
+.order-help {
+    padding: 28px 22px;
+
+    background: var(--dark-green);
+    color: white;
+    border-radius: 13px;
+}
+
+.order-help-icon {
+    font-size: 40px;
+}
+
+.order-help h3 {
+    margin: 9px 0;
+    color: var(--gold);
+    font-size: 22px;
+}
+
+.order-help p {
+    font-size: 14px;
+}
+
+.order-help > a {
+    display: block;
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ffffff30;
+
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.order-help > a:hover {
+    color: var(--gold);
+}
+
+.order-help-note {
+    margin-top: 23px;
+    padding: 15px;
+
+    background: #ffffff14;
+    border-radius: 9px;
+}
+
+.order-help-note strong {
+    color: var(--gold);
+}
+
+.order-help-note p {
+    margin-top: 9px;
+}
+
+
+/* ==========================================
+   HOW TO ORDER
+========================================== */
+
+.order-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.order-step {
+    padding: 24px 17px;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.step-number {
+    display: grid;
+    place-items: center;
+
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 17px;
+
+    background: var(--dark-green);
+    color: var(--gold);
+
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.order-step h3 {
+    color: var(--dark-green);
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+
+.order-step p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   PRODUCT GALLERY
+========================================== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.gallery-card {
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.gallery-card figcaption {
+    padding: 14px 9px;
+
+    color: var(--dark-green);
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gallery-note {
+    margin-top: 14px;
+
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   ABOUT US
+========================================== */
+
+.about-section p {
+    margin: 8px 0 14px;
+}
+
+
+/* ==========================================
+   FREQUENTLY ASKED QUESTIONS
+========================================== */
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.faq-item {
+    overflow: hidden;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.faq-item summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 17px 20px;
+    cursor: pointer;
+
+    color: var(--dark-green);
+    font-size: 15px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    color: #b68100;
+    font-size: 25px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item[open] {
+    background: white;
+    border-color: var(--gold);
+}
+
+.faq-item p {
+    padding: 0 20px 19px;
+
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   PROFESSIONAL CONTACT SECTION
+========================================== */
+
+.egg-contact {
+    padding: 38px 30px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.egg-contact h2 {
+    color: var(--dark-green);
+    font-size: 29px;
+    margin: 12px 0;
+}
+
+.egg-contact__intro {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+}
+
+.egg-contact__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+
+/* CONTACT CARDS */
+
+.egg-contact__card {
+    min-width: 0;
+    padding: 25px 15px;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+}
+
+.egg-contact__card h3 {
+    margin-bottom: 12px;
+
+    color: var(--dark-green);
+    font-size: 17px;
+}
+
+.egg-contact__card p {
+    font-size: 14px;
+}
+
+.egg-contact__card a {
+    display: block;
+    margin: 10px 0;
+
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.egg-contact__card a:hover {
+    color: var(--dark-green);
+}
+
+
+/* EMAIL */
+
+.egg-contact__email {
+    margin-top: 24px;
+}
+
+.egg-contact__email h3 {
+    margin-bottom: 7px;
+
+    color: var(--dark-green);
+    font-size: 17px;
+}
+
+.egg-contact__email a {
+    color: var(--green);
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+
+/* CONTACT BUTTONS */
+
+.egg-contact__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.egg-contact__button {
+    display: inline-block;
+    padding: 12px 21px;
+
+    background: var(--dark-green);
+    color: white;
+
+    border: 2px solid var(--dark-green);
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.egg-contact__button:hover {
+    background: var(--green);
+}
+
+.egg-contact__button--outline {
+    background: white;
+    color: var(--dark-green);
+}
+
+.egg-contact__button--outline:hover {
+    background: var(--cream);
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    padding: 27px 15px;
+
+    background: var(--dark-green);
+    color: white;
+
+    border-top: 3px solid var(--gold);
+    text-align: center;
+    font-size: 13px;
+}
+
+footer p + p {
+    color: var(--gold);
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   MOBILE QUICK CONTACT BAR
+========================================== */
+
+.mobile-contact-bar {
+    display: none;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-photo img {
+        height: 290px;
+    }
+
+    .benefits-grid,
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .egg-delivery-grid,
+    .order-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-help {
+        padding: 24px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding-bottom:
+            calc(78px + env(safe-area-inset-bottom));
+    }
+
+    .site-header {
+        padding: 14px 12px;
+    }
+
+    .brand {
+        gap: 10px;
+    }
+
+    .brand-logo {
+        width: 70px;
+        height: 60px;
+    }
+
+    .brand h1 {
+        font-size: 19px;
+        letter-spacing: 0.3px;
+    }
+
+    .brand p {
+        font-size: 11px;
+    }
+
+
+    /* MOBILE MENU */
+
+    .navbar {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+
+    /* MAIN CONTENT */
+
+    main {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    section {
+        margin-bottom: 18px;
+    }
+
+    .content-section {
+        padding: 23px 17px;
+    }
+
+    .content-section h2 {
+        font-size: 24px;
+    }
+
+
+    /* HOMEPAGE */
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 23px;
+        padding: 30px 21px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .hero-photo img {
+        height: 210px;
+    }
+
+
+    /* BUSINESS HIGHLIGHTS */
+
+    .highlights {
+        gap: 5px;
+        padding: 14px 8px;
+    }
+
+    .highlights div {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .highlights strong {
+        font-size: 23px;
+    }
+
+    .highlights span {
+        font-size: 11px;
+    }
+
+
+    /* EGG PRICES */
+
+    .catalogue-card {
+        padding: 15px 11px;
+    }
+
+    .product-heading h3 {
+        font-size: 18px;
+    }
+
+    .egg-photo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .price-table {
+        font-size: 13px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 12px 10px;
+    }
+
+
+    /* CHICKENS */
+
+    .chicken-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chicken-card {
+        padding: 19px 15px;
+    }
+
+    .chicken-photo {
+        height: 200px;
+    }
+
+    .price-display {
+        font-size: 22px;
+    }
+
+
+    /* WHY CHOOSE US */
+
+    .benefits-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .benefit-card {
+        padding: 18px 10px;
+    }
+
+    .benefit-card h3 {
+        font-size: 15px;
+    }
+
+    .benefit-card p {
+        font-size: 12px;
+    }
+
+
+    /* DELIVERY */
+
+    .egg-delivery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .egg-delivery-card {
+        padding: 23px 16px;
+    }
+
+    .egg-delivery-action .primary-btn {
+        width: 100%;
+    }
+
+
+    /* QUICK ORDER FORM */
+
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-form {
+        padding: 18px 13px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .order-item {
+        grid-template-columns:
+            minmax(0, 1fr) 85px;
+    }
+
+    .order-item .remove-item-btn {
+        grid-column: 1 / -1;
+        justify-self: end;
+    }
+
+    .order-item .item-product {
+        font-size: 12px;
+    }
+
+    .fulfilment-options label {
+        margin-right: 12px;
+    }
+
+    .submit-order-btn,
+    .email-backup-btn {
+        width: 100%;
+    }
+
+
+    /* ORDER STEPS */
+
+    .order-steps {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PHOTO GALLERY */
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-card img {
+        height: 155px;
+    }
+
+    .gallery-card figcaption {
+        font-size: 12px;
+    }
+
+
+    /* FAQ */
+
+    .faq-item summary {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .faq-item p {
+        padding: 0 16px 17px;
+    }
+
+
+    /* CONTACT */
+
+    .egg-contact {
+        padding: 30px 18px;
+    }
+
+    .egg-contact h2 {
+        font-size: 25px;
+    }
+
+    .egg-contact__grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .egg-contact__card {
+        padding: 22px 15px;
+    }
+
+    .egg-contact__actions {
+        flex-direction: column;
+    }
+
+    .egg-contact__button {
+        width: 100%;
+    }
+
+
+    /* STICKY MOBILE CONTACT BUTTONS */
+
+    .mobile-contact-bar {
+        position: fixed;
+        z-index: 100;
+
+        display: flex;
+        gap: 10px;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        padding:
+            10px 13px
+            calc(10px + env(safe-area-inset-bottom));
+
+        background: white;
+        border-top: 2px solid var(--gold);
+
+        box-shadow: 0 -4px 18px #00000015;
+    }
+
+    .mobile-contact-bar a {
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 46px;
+        padding: 6px 9px;
+
+        border-radius: 8px;
+
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .mobile-call {
+        background: var(--dark-green);
+        color: white;
+    }
+
+    .mobile-enquire {
+        background: var(--gold);
+        color: var(--dark-green);
+    }
+
+}
+
+
+/* ==========================================
+   VERY SMALL PHONES
+========================================== */
+
+@media (max-width: 370px) {
+
+    .brand-logo {
+        width: 60px;
+        height: 52px;
+    }
+
+    .brand h1 {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 25px 16px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 10px 7px;
+        font-size: 12px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-contact-bar a {
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+}
